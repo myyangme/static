@@ -1,0 +1,76 @@
+---
+permalink: /404.html
+---
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Oops-您要找的页面不见了！！！</title>
+<style>
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, img { border:medium none; margin: 0; padding: 0 }
+img{ border: none }
+html { font-size: 100px }
+body { background: rgb(209,228,234); background: -moz-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%, rgba(186,228,244,1) 100%); background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(209,228,234,1)), color-stop(100%,rgba(186,228,244,1))); background: -webkit-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%); background: -o-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%); background: -ms-radial-gradient(center, ellipse cover,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%); background: radial-gradient(ellipse at center,  rgba(209,228,234,1) 0%,rgba(186,228,244,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1e4ea', endColorstr='#bae4f4',GradientType=1 ); color: #000; font: .2rem/.4rem 'Microsoft Yahei' }
+#container { width: 100% }
+#not-found { bottom: 0; height: 2rem; left: 0; margin: auto; position: absolute; right: 0; top: 0 }
+p:first-child{ color: #eee; font-size: 1.2rem; line-height: 1.4rem; text-align: center; 
+text-shadow: -1px 1px 0 #ddd, -2px 2px 0 #c8c8c8, -3px 3px 0 #ccc, -4px 4px 0 #b8b8b8, -4px 4px 0 #bbb, 0px 1px 1px rgba(0,0,0,.4), 0px 2px 2px rgba(0,0,0,.3), -1px 3px 3px rgba(0,0,0,.2), -1px 5px 5px rgba(0,0,0,.1), -2px 8px 8px rgba(0,0,0,.1), -2px 13px 13px rgba(0,0,0,.1); }
+p:last-child{ color: #fff; font-size: .3rem; line-height: .4rem; text-align: center }
+#page { bottom: 0; height: .8rem; overflow: hidden; position: absolute; width: 100% }
+#left, #right{ background: #ff0000; -moz-border-radius: 50%; border-radius: 50%; height: 1.6rem; position: absolute; width: 1.6rem }
+#left { left: -.8rem }
+#right { right: -.8rem }
+a { color: #fff; display: block; font-size: .22rem; line-height: .44rem; position: relative; width: .8rem }
+a:link { text-decoration:none;}
+a:visited { text-decoration:none;}
+a:hover { color: #2EFFDB; font-size: .25rem; text-decoration: none;}
+a:active { color: #2EFFDB; font-size: .24rem; text-decoration: none;}
+#left a { right: -.76rem; text-align: center; top: .35rem }
+#right a { left: .1rem; text-align: center; top: .35rem }
+#logo { display: inline-block; left: .05rem; position: absolute; top: .08rem }
+#logo img { max-width: .9rem }
+#show-time { position: absolute; right: .08rem; top: .03rem }
+#show-time { color: #fff; font-size: .14rem; line-height: .24rem }
+</style>
+</head>
+<body>
+	<div id = "container">
+		<div id="not-found">
+			<p>404</p>
+			<p>不好,您来到了无人区！</p>
+		</div>
+		<div id="page">
+			<div id="left">
+				<a href="http://myyang.me/">Home</a>
+			</div>
+			<div id="right">
+				<a href="http://my.myyang.me/">Me</a>
+			</div>
+		</div>
+		<div id="logo">
+			<img src="yang.png" alt="MyYang">
+		</div>
+		<div id="show-time">
+			<span>10</span><span>s后带您回到主页</span>
+		</div>
+	</div>
+<script>
+	var oDiv = document.getElementById("show-time");
+	var oTime = oDiv.getElementsByTagName("span")[0];
+	var time = 10;
+	var temp = setInterval(ShowTime, 1000);
+	function ShowTime() {
+		oTime.innerHTML = time;
+		time --;
+		if (time < 0) {
+			clearInterval(temp);
+			openHome();
+		}
+	}
+	function openHome() {
+		window.location.href="http://myyang.me/"; 
+	}
+</script>
+</body>
+</html>
